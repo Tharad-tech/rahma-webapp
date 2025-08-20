@@ -5,25 +5,25 @@ const { t, locale } = useI18n()
 <template>
   <section
     id="promo"
-    class="bg-secondary text-white text-center py-16"
+    class="bg-[#6ACEE5] text-white text-center py-16"
   >
-    <div class="container">
+    <div class="container mt-5 ">
       <!-- header -->
       <h2
         class="text-3xl md:text-4xl font-bold"
         data-aos="fade-up"
       >
-        {{ t("landing.driver_promo.title") }}
+        {{ t("landing.promo.title") }}
       </h2>
       <p
-        class="text-2xl text-balance mt-4"
+        class="text-2xl text-balance mt-4 mb-14"
         data-aos="fade-up"
       >
-        {{ t("landing.driver_promo.description") }}
+        {{ t("landing.promo.description") }}
       </p>
       <!-- images & screens -->
       <div
-        class="mt-10 flex justify-center"
+        class="mt-10 mb-14 flex justify-center"
         data-aos="zoom-in"
       >
         <NuxtImg
@@ -47,8 +47,8 @@ const { t, locale } = useI18n()
           "
           alt="Promo Image"
           format="webp"
-          width="1656"
-          height="785"
+          width="1155"
+          height="626"
           class="hidden lg:block"
         />
       </div>
@@ -57,12 +57,10 @@ const { t, locale } = useI18n()
         class="mt-5 text-center"
         data-aos="zoom-in"
       >
-        <p class="text-2xl my-12">
-          {{ t("landing.driver_promo.cta") }}
-        </p>
+       
         <div class="flex flex-wrap justify-center items-center gap-y-4 gap-x-8">
-          <AppStoreBadge />
           <GooglePlayBadge />
+          <AppStoreBadge />
         </div>
       </div>
     </div>
