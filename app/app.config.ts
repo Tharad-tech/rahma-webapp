@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  title: 'Qarah',
+  title: 'Rahma',
   description:
     'Qarah is an online application that provides fast and easy water delivery services to your home, ensuring the highest quality standards.',
   url: 'https://qarahapp.com/',
@@ -12,11 +12,6 @@ export default defineAppConfig({
     android: 'https://play.google.com/store/apps/details?id=com.qarahapp',
   },
   contact: {
-    address: {
-      en: 'Riyadh, Al-Malqa District',
-      ar: 'الرياض، حي الملقا',
-    },
-    phone: '+966128977333',
     email: 'info@qarahapp.com',
     whatsapp: 'https://wa.me/966128977333',
     instagram: 'https://www.instagram.com/qarahapp/',
