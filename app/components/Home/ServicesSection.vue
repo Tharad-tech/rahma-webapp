@@ -53,9 +53,9 @@ const services = [
                 <NuxtImg
                   :src="service.icon"
                   alt="success-icon "
-                  class="w-8 h-8"
-                  width="32"
-                  height="32"
+                  class="w-10 h-10"
+                  width="40"
+                  height="40"
                   format="webp"
                 />
               </div>

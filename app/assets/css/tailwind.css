@@ -16,7 +16,7 @@
     --popover: 0 0% 100%; /* rgb(255, 255, 255) */
     --popover-foreground: 0 0% 3.9%; /* rgb(10, 10, 10) */
     --muted: 0 0% 96.1%; /* rgb(245, 245, 245) */
-    --muted-foreground: 0 0% 45.1%; /* rgb(115, 115, 115) */
+    --muted-foreground:233, 93%, 5%, 1; /* rgb(115, 115, 115) */
     --accent: 0 0% 96.1%; /* rgb(245, 245, 245) */
     --accent-foreground: 0 0% 9%; /* rgb(23, 23, 23) */
     --destructive: 0 84.2% 60.2%; /* rgb(255, 69, 58) */
