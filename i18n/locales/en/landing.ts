@@ -13,7 +13,7 @@ export default {
   },
   promo: {
     title: 'Healthcare… Simply and Quickly',
-    description: 'From registration to the session, every step in the app is designed to make things easier for you while ensuring your comfort and privacy.'
+    description: 'From registration to the session, every step in the app is designed to make things easier for you while ensuring your comfort and privacy.',
   },
   stats: {
     providers: 'Number of Service Providers',
@@ -28,10 +28,9 @@ export default {
     feature2: 'Call or video as per your choice.',
     feature3: 'Certified doctors and nurses.',
     feature4: 'Complete privacy and security.',
-    feature5: 'Easy and user-friendly interface'
+    feature5: 'Easy and user-friendly interface',
   },
   contact: {
     contact_us: 'Contact Us',
   },
 }
-
