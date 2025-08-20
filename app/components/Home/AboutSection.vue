@@ -15,7 +15,6 @@ const aboutServices = [
     class="py-16 bg-secondary/10"
   >
     <div class="container">
-    
       <div
         class="lg:grid lg:grid-cols-2 gap-24 flex justify-center items-center flex-col-reverse"
       >
@@ -36,12 +35,11 @@ const aboutServices = [
         </div>
         <!-- content -->
         <div class="text-start">
-         
           <div class="text-4xl 4xl:text-5xl font-bold text-primary mb-8 pt-7">
             <h2
               class="text-primary inline-block text-pretty leading-relaxed mb-4"
-            >              
-                {{ t("landing.about.title") }}     
+            >
+              {{ t("landing.about.title") }}
             </h2>
             <p
               class="text-muted-foreground mb-10 text-lg"

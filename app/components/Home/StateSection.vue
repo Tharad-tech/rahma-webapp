@@ -22,14 +22,14 @@ const stats = computed(() => [
         <div
           v-for="(stat, index) in stats"
           :key="index"
-         
+
           class="flex flex-col items-center gap-3"
-:class="{
-  'md:border-e': index % 2 === 0  && index !== stats.length - 1,
-  'lg:border-e': index % 2 !== 0 && index !== stats.length - 1,
-  'order-first lg:order-none ': index ==2 ,
-  'order-3 lg:order-none md:border-s lg:border-s-0 md:border-e-0 lg:border-e': index==0 
-}"
+          :class="{
+            'md:border-e': index % 2 === 0 && index !== stats.length - 1,
+            'lg:border-e': index % 2 !== 0 && index !== stats.length - 1,
+            'order-first lg:order-none ': index ==2,
+            'order-3 lg:order-none md:border-s lg:border-s-0 md:border-e-0 lg:border-e': index==0,
+          }"
           data-aos="fade-up"
           data-aos-delay="100"
         >
