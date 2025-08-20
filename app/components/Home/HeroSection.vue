@@ -10,7 +10,7 @@ const { t, locale } = useI18n()
     class="py-16"
   >
     <div class="container">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-40 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-40 gap-10 items-center">
         <!-- content -->
         <div class="text-center lg:text-start">
           <h1
