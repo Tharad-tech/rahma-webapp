@@ -10,15 +10,15 @@ const { t, locale } = useI18n()
     class="py-16"
   >
     <div class="container">
-      <div class="grid lg:grid-cols-3 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-40 items-center">
         <!-- content -->
-        <div class="lg:col-span-2 text-center lg:text-start">
+        <div class="text-center lg:text-start">
           <h1
-            class="text-[40px] 4xl:text-3xl font-bold text-primary mb-4"
+            class="text-[40px] 4xl:text-3xl font-bold text-primary mb-6"
           >
             {{ t("landing.hero.app_name") }}
           </h1>
-          <div class="text-lg lg:text-xl 4xl:text-3xl text-secondary">
+          <div class="text-[16px] lg:text-xl 4xl:text-3xl text-secondary">
             <p class="my-6">
               {{ t("landing.hero.app_description") }}
             </p>
@@ -41,8 +41,8 @@ const { t, locale } = useI18n()
                 : '/img/screens/hero-screen-en.png'
             "
             alt="App Mockup"
-            height="630"
-            width="485"
+            height="545"
+            width="420"
             class="mx-auto"
             format="webp"
           />

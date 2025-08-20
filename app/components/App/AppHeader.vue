@@ -42,7 +42,7 @@ watch(
         >
           <img
             :src="logo"
-            alt="Qarah Logo"
+            alt="Rahma Logo"
             width="144"
             height="44"
             class="hidden sm:block"
@@ -80,7 +80,7 @@ watch(
                     >
                       <img
                         :src="logo"
-                        alt="Qarah Logo"
+                        alt="rahma Logo"
                         width="140"
                         height="40"
                       >
