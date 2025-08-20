@@ -17,9 +17,9 @@ const services = [
     class="py-16"
   >
     <div class="container">
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-24 justify-evenly">
+      <div class="flex flex-col-reverse items-center lg:grid lg:grid-cols-5 gap-24 lg:justify-evenly">
         <!-- image -->
-        <div class="hidden lg:col-span-2 lg:flex justify-center">
+        <div class=" lg:col-span-2 lg:flex justify-center">
           <NuxtImg
             data-aos="fade-up"
             :src="locale === 'ar' ? '/img/screens/services-screen-ar.png' : '/img/screens/services-screen-en.png'"
@@ -31,7 +31,7 @@ const services = [
         </div>
 
         <!-- services -->
-        <div class="lg:col-span-3 text-center lg:text-start lg:mt-4">
+        <div class="lg:col-span-3 text-start lg:mt-4">
           <h2 class="text-primary text-2xl md:text-4xl font-bold mb-7 border-b-4  border-[#6ACEE5] w-fit pb-3 ">
             {{ t('landing.service.our_services') }}
           </h2>
@@ -45,7 +45,7 @@ const services = [
             <div
               v-for="(service, index) in services"
               :key="index"
-              class="flex items-center md:flex-row flex-col gap-5"
+              class="flex items-center md:flex-row  gap-5"
               data-aos="fade-up"
               data-aos-delay="100"
             >
