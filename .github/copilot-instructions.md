@@ -1,0 +1,9 @@
+- Always use `script setup` and the Composition API in `.vue` files. Do NOT use the Options API.
+- Always use **TypeScript** for `.vue` files.
+- We use **TypeScript** in the project code.
+- The project uses **Nuxt 3**
+- Styling is implemented with **Tailwind CSS** and **shadcn-vue** library.
+- **VueUse** library should be utilized for its composables to enhance development speed and maintainability. Prefer VueUse composables when they provide a cleaner or more efficient solution.
+- For styling:
+  - Use **scoped styles** in Vue components to avoid conflicts.
+  - Use **CSS variables** for consistent theming.

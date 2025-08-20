@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "exer7um.vue-3-vscode-snippets",
+    "antfu.goto-alias",
+    "antfu.iconify",
+    "ms-vscode.vscode-typescript-next",
+    "mattpocock.ts-error-translator",
+    "christian-kohler.path-intellisense",
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "streetsidesoftware.code-spell-checker",
+    "antfu.file-nesting",
+    "wix.vscode-import-cost",
+    "deque-systems.vscode-axe-linter"
+  ],
+  "unwantedRecommendations": ["octref.vetur", "sdras.vue-vscode-snippets"]
+}

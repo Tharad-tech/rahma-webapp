@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:    # Will trigger on pushes to all branches
+  pull_request:  # Will trigger for pull requests targeting all branches
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repository
+      - uses: actions/checkout@v4 # Updated to use the latest version
+
+      # Setup Node.js and cache npm dependencies
+      - uses: actions/setup-node@v4 # Updated version
+        with:
+          node-version: 22
+          cache: 'npm' # Caching npm dependencies
+
+      # Install dependencies using npm
+      - name: Install dependencies
+        run: npm install
+
+      # Lint files
+      - name: Lint files
+        run: npm run lint

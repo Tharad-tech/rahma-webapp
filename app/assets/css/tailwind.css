@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary:234, 95%, 15%, 1; /* rgb(2, 10, 76, 1) */
+    --primary-foreground: 0 0% 100%; /* rgb(255, 255, 255) */
+    --secondary: 0, 0%, 60% ; /* rgb(153, 153, 153, 1) */
+    --secondary-foreground: 0 0% 100%; /* rgb(255, 255, 255) */
+
+    --background: 0 0% 100%; /* rgb(255, 255, 255) */
+    --foreground: 0 0% 3.9%; /* rgb(10, 10, 10) */
+    --card: 0 0% 100%; /* rgb(255, 255, 255) */
+    --card-foreground: 0 0% 3.9%; /* rgb(10, 10, 10) */
+    --popover: 0 0% 100%; /* rgb(255, 255, 255) */
+    --popover-foreground: 0 0% 3.9%; /* rgb(10, 10, 10) */
+    --muted: 0 0% 96.1%; /* rgb(245, 245, 245) */
+    --muted-foreground: 0 0% 45.1%; /* rgb(115, 115, 115) */
+    --accent: 0 0% 96.1%; /* rgb(245, 245, 245) */
+    --accent-foreground: 0 0% 9%; /* rgb(23, 23, 23) */
+    --destructive: 0 84.2% 60.2%; /* rgb(255, 69, 58) */
+    --destructive-foreground: 0 0% 98%; /* rgb(250, 250, 250) */
+    --border: 0 0% 89.8%; /* rgb(229, 229, 229) */
+    --input: 0 0% 89.8%; /* rgb(229, 229, 229) */
+    --ring: 0 0% 3.9%; /* rgb(10, 10, 10) */
+    --chart-1: 12 76% 61%; /* rgb(242, 133, 74) */
+    --chart-2: 173 58% 39%; /* rgb(49, 160, 126) */
+    --chart-3: 197 37% 24%; /* rgb(37, 83, 128) */
+    --chart-4: 43 74% 66%; /* rgb(235, 199, 80) */
+    --chart-5: 27 87% 67%; /* rgb(255, 171, 76) */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  :root {
+    @apply scroll-smooth scroll-pt-[5.5rem];
+  }
+
+  body {
+    @apply font-almarai bg-background text-foreground;
+  }
+}
+
+
+@layer utilities {
+  .title-underline {
+    @apply relative before:content-[''] before:absolute before:left-0 before:-bottom-1 before:w-full before:h-[40px] before:bg-[#FFD731] before:-z-10;
+  }
+  
+  /* LTR direction */
+  :root:not([dir="rtl"]) .title-underline {
+    @apply before:clip-path-polygon-title-ltr;
+  }
+  
+  /* RTL direction */
+  [dir="rtl"] .title-underline {
+    @apply before:right-0 before:left-auto before:clip-path-polygon-title-rtl;
+  }
+}
