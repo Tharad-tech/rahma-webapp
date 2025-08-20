@@ -14,8 +14,8 @@ useHead(() => ({
     <HomeHeroSection />
     <HomeServicesSection />
     <HomePromoSection />
-    <HomeStateSection />
     <HomeAboutSection />
+    <HomeStateSection />
     <HomeContactUs />
   </div>
 </template>
