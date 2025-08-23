@@ -1,5 +1,6 @@
 export default {
   contact: {
+    title: ' تواصل معنا',
     full_name: 'الاسم كامل',
     email: 'البريد الإلكتروني',
     message: '  استفسارك',

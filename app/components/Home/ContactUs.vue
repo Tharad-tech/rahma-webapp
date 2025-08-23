@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n()
 </script>
 
 <template>
@@ -8,7 +9,7 @@
   >
     <div class="flex justify-center items-center w-full text-primary font-bold text-4xl">
       <h1 class=" p-4 border-b-4 border-[#020A4C] mb-10">
-        تواصل معنا
+        {{ t("form.contact.title") }}
       </h1>
     </div>
     <div class="container border border-[#E7E7E7] rounded-3xl">

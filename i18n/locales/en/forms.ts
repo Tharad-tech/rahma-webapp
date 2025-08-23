@@ -1,5 +1,6 @@
 export default {
   contact: {
+    title: 'Contact Us',
     full_name: 'Full Name',
     email: 'Email',
     message: 'Write your message here!',
