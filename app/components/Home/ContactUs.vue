@@ -15,7 +15,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 py-16 items-center justify-center">
         <!-- image -->
         <div
-          class="lg:col-span-2 flex justify-center lg:justify-start items-center lg:items-start flex-col "
+          class="lg:col-span-2 flex justify-center lg:justify-start items-center lg:items-start flex-col order-2 lg:order-1"
         >
           <NuxtImg
             src="/img/screens/form.png"
@@ -26,7 +26,7 @@
           />
         </div>
         <!-- form -->
-        <div class="lg:col-span-3">
+        <div class="lg:col-span-3 order-1 lg:order-2">
           <ContactForm class="max-w-2xl" />
         </div>
       </div>
