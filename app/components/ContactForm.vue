@@ -53,8 +53,8 @@ const onSubmit = handleSubmit(async (values) => {
 
 <template>
   <form @submit.prevent="onSubmit">
-    <div class="grid grid-cols-1 gap-6 mb-8">
-      <div>
+    <div class="grid grid-cols-3  gap-6 mb-8">
+      <div class="col-span-3">
         <!-- name -->
         <AppFormField
           name="name"
@@ -76,7 +76,7 @@ const onSubmit = handleSubmit(async (values) => {
           </template>
         </AppFormField>
       </div>
-      <div>
+      <div class="col-span-3 ">
         <!-- email -->
         <AppFormField
           name="email"
@@ -99,7 +99,7 @@ const onSubmit = handleSubmit(async (values) => {
         </AppFormField>
       </div>
 
-      <div class="">
+      <div class="col-span-3 ">
         <!-- message -->
         <AppFormField
           name="message"

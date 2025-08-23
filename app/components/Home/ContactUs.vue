@@ -26,8 +26,8 @@
           />
         </div>
         <!-- form -->
-        <div class="lg:col-span-3 order-1 lg:order-2">
-          <ContactForm class="max-w-2xl" />
+        <div class="lg:col-span-3 order-1 lg:order-2 flex justify-center lg:justify-start lg:items-start items-center  ">
+          <ContactForm class="" />
         </div>
       </div>
     </div>
