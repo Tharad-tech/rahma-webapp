@@ -52,29 +52,8 @@ const onSubmit = handleSubmit(async (values) => {
 </script>
 
 <template>
-  <div>
-    <h1>تواصل معنا </h1>
-  </div>
   <form @submit.prevent="onSubmit">
     <div class="grid grid-cols-1 gap-6 mb-8">
-      <div>
-        <!-- email -->
-        <AppFormField
-          name="email"
-          required
-        >
-          <template #default="{ componentField }">
-            <Input
-              type="email"
-              class="py-7 text-lg placeholder:text-muted-foreground/75 border-secondary focus-visible:ring-secondary"
-              :placeholder="t('forms.contact.email')"
-              v-bind="componentField"
-              :disabled="isSubmitting"
-            />
-          </template>
-        </AppFormField>
-      </div>
-
       <div>
         <!-- name -->
         <AppFormField
@@ -84,10 +63,37 @@ const onSubmit = handleSubmit(async (values) => {
           <template #default="{ componentField }">
             <Input
               type="text"
-              class="py-7 text-lg placeholder:text-muted-foreground/75 border-secondary focus-visible:ring-secondary"
+              class="py-7 text-lg placeholder:text-muted-foreground/75 border-secondary focus-visible:ring-secondary relative ps-10"
               :placeholder="t('forms.contact.full_name')"
               v-bind="componentField"
               :disabled="isSubmitting"
+            />
+            <NuxtImg
+              src="/img/icons/profile.svg"
+              class="absolute start-0 inset-y-0 m-3 py-3"
+              size="24"
+            />
+          </template>
+        </AppFormField>
+      </div>
+      <div>
+        <!-- email -->
+        <AppFormField
+          name="email"
+          required
+        >
+          <template #default="{ componentField }">
+            <Input
+              type="email"
+              class="py-7 text-lg placeholder:text-muted-foreground/75 border-secondary focus-visible:ring-secondary relative ps-10"
+              :placeholder="t('forms.contact.email')"
+              v-bind="componentField"
+              :disabled="isSubmitting"
+            />
+            <NuxtImg
+              src="/img/icons/sms.svg"
+              class="absolute start-0 inset-y-0 m-3 py-3"
+              size="24"
             />
           </template>
         </AppFormField>
@@ -103,9 +109,14 @@ const onSubmit = handleSubmit(async (values) => {
             <Textarea
               v-bind="componentField"
               :placeholder="t('forms.contact.message')"
-              class="resize-none text-lg placeholder:text-muted-foreground/75 border-secondary focus-visible:ring-secondary"
+              class="resize-none text-lg placeholder:text-muted-foreground/75 border-secondary focus-visible:ring-secondary relative ps-10"
               rows="7"
               :disabled="isSubmitting"
+            />
+            <NuxtImg
+              src="/img/icons/message-text.svg"
+              class="absolute start-0 inset-y-0 m-3 py-3"
+              size="24"
             />
           </template>
         </AppFormField>
@@ -115,6 +126,7 @@ const onSubmit = handleSubmit(async (values) => {
         type="submit"
         size="lg"
         class="bg-primary text-white w-full md:w-52 text-xl font-bold"
+        variant="default"
         :disabled="isSubmitting"
       >
         <template v-if="isSubmitting">

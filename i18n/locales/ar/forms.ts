@@ -1,8 +1,8 @@
 export default {
   contact: {
     full_name: 'الاسم كامل',
-    email: 'الإيميل',
-    message: 'اكتب رسالتك هنا!',
+    email: 'البريد الإلكتروني',
+    message: '  استفسارك',
     required_error: 'هذا الحقل مطلوب.',
     name_error: 'يجب أن يكون الاسم 3 أحرف على الأقل.',
     email_error: 'أدخل بريدًا إلكترونيًا صالحًا.',
