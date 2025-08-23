@@ -54,14 +54,14 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'ar',
-        name: 'AR',
+        name: 'العربية',
         file: 'ar.ts',
         dir: 'rtl',
         language: 'ar-SA',
       },
       {
         code: 'en',
-        name: 'EN',
+        name: 'English',
         file: 'en.ts',
         dir: 'ltr',
         language: 'en-US',

@@ -51,12 +51,13 @@ watch(
 
         <!-- !---- Mobile Menu ----! -->
         <div
-          class="flex lg:hidden items-center bg-background/95 backdrop-blur-lg order-last"
+          class="flex lg:hidden items-center bg-primary backdrop-blur-lg order-last"
         >
           <Sheet v-model:open="isOpen">
             <SheetTrigger as-child>
               <Icon
-                name="heroicons-outline:menu-alt-1"
+                name="hugeicons:menu-02"
+                style="color: #020A4C"
                 :class="[
                   'cursor-pointer',
                   {

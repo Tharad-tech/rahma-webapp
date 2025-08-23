@@ -21,16 +21,27 @@ const switchLanguage = async (code: 'ar' | 'en') => {
   <Button
     v-for="l in availableLocales"
     :key="l.code"
-    variant="outline"
+    variant="link"
     size="lg"
     class="px-2"
     @click="switchLanguage(l.code)"
   >
-    <Icon
-      name="heroicons:language"
-      class="text-base md:text-lg"
-    />
     <span class="text-sm md:text-base">{{ l.name }}</span>
+
+    <NuxtImg
+      v-if="l.code === 'ar'"
+      src="/img/icons/Flag_of_Saudi_Arabia1.svg"
+      alt="Flag_of_Saudi_Arabia"
+      densities="1x 2x"
+      sizes="24"
+    />
+    <NuxtImg
+      v-else-if="l.code === 'en'"
+      src="/img/icons/United_kingdom_flag.jpeg"
+      alt="United_kingdom_flag"
+      densities="1x 2x"
+      sizes="24"
+    />
   </Button>
 </template>
 
