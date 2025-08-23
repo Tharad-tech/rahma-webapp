@@ -1,6 +1,6 @@
 export default {
   welcome: 'مرحباً بك',
-  siteName: 'قرح',
+  siteName: 'رحمة',
   authorName: 'ثراد تك',
   meta: {
     title: 'الرئيسية',

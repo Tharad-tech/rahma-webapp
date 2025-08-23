@@ -1,6 +1,6 @@
 export default {
   welcome: 'Welcome',
-  siteName: 'Qarah',
+  siteName: 'Rahma',
   authorName: 'Tharad Tech',
   meta: {
     title: 'Home Page',

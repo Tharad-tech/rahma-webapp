@@ -3,7 +3,7 @@ export default {
     app_name: 'Book Your Medical Session Anytime, Anywhere.',
     app_description: 'A medical app that makes it easy for you to access certified doctors and nurses through phone or video calls, at a time and place that suits you. Instead of waiting at the clinic, book your remote consultation and take care of your health quickly and easily, with a secure and completely private experience.',
   },
-  services: {
+  service: {
     our_services: 'App Features',
     services_description: 'We designed the app to provide you with a comfortable, secure, and fast medical consultation… without complications and without wasting your time.',
     remote_booking: 'Book remote sessions.',

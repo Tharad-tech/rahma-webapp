@@ -12,8 +12,8 @@ const metaDescription = computed(() => t('meta.metaDescription'))
 
 // Define SEO data
 useSeoMeta({
-  // ogImage: '/img/og.png',
-  // twitterImage: '/img/og.png',
+  ogImage: '/img/og.png',
+  twitterImage: '/img/og.png',
   twitterCard: 'summary',
   themeColor: '#15405b',
   author: 'Tharad Tech',
