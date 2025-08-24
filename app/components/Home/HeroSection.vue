@@ -12,7 +12,7 @@ const { t, locale } = useI18n()
     <div class="container">
       <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-40 gap-10 items-center">
         <!-- content -->
-        <div class="text-center lg:text-start">
+        <div class="text-start">
           <h1
             class="text-[40px] 4xl:text-3xl font-bold text-primary mb-6"
           >
