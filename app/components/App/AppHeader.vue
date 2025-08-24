@@ -43,8 +43,8 @@ watch(
           <img
             :src="logo"
             alt="Rahma Logo"
-            width="144"
-            height="44"
+            width="59"
+            height="60"
             class="hidden sm:block"
           >
         </NuxtLinkLocale>
@@ -64,7 +64,7 @@ watch(
                     'rotate-180': !isRtl,
                   },
                 ]"
-                size="32"
+                size="24"
                 @click="isOpen = true"
               />
             </SheetTrigger>

@@ -40,8 +40,8 @@ const { contact, author } = useAppConfig()
             <img
               :src="logoWhite"
               alt="Rahma Logo"
-              width="144"
-              height="44"
+              width="59"
+              height="60"
             >
           </div>
 
