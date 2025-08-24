@@ -22,7 +22,6 @@ const switchLanguage = async (code: 'ar' | 'en') => {
     v-for="l in availableLocales"
     :key="l.code"
     variant="link"
-    size="lg"
     class="px-2"
     @click="switchLanguage(l.code)"
   >
