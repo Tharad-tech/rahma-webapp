@@ -117,7 +117,7 @@ const onSubmit = handleSubmit(async (values) => {
             />
             <NuxtImg
               src="/img/icons/message-text.svg"
-              class="absolute start-0 inset-y-0 m-3 pt-2 pb-3"
+              class="absolute start-0 inset-y-0 m-3 pt-1 pb-3"
               width="24"
               height="24"
             />
