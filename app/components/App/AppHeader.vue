@@ -45,26 +45,25 @@ watch(
             alt="Rahma Logo"
             width="59"
             height="60"
-            class="hidden sm:block"
+            class="logo_response"
           >
         </NuxtLinkLocale>
 
         <!-- !---- Mobile Menu ----! -->
-        <div
-          class="flex lg:hidden items-center bg-primary backdrop-blur-lg order-last"
-        >
+        <div class="flex lg:hidden items-center order-first">
           <Sheet v-model:open="isOpen">
             <SheetTrigger as-child>
-              <Icon
-                name="hugeicons:menu-02"
-                style="color: #020A4C"
+              <NuxtImg
+                src="/img/icons/menu.svg"
+                width="25"
+                height="18"
+                alt="menu icon"
                 :class="[
                   'cursor-pointer',
                   {
                     'rotate-180': !isRtl,
                   },
                 ]"
-                size="24"
                 @click="isOpen = true"
               />
             </SheetTrigger>
@@ -82,10 +81,11 @@ watch(
                       <img
                         :src="logo"
                         alt="rahma Logo"
-                        width="140"
-                        height="40"
+                        width="50"
+                        height="50"
                       >
                     </NuxtLinkLocale>
+                    <AppLangSwitcher @change="isOpen = false" />
                   </SheetTitle>
                 </SheetHeader>
                 <div class="flex flex-col gap-5">
@@ -94,7 +94,7 @@ watch(
                     :key="label"
                     as-child
                     variant="link"
-                    class="relative justify-start text-2xl hover:no-underline"
+                    class="relative justify-start text-xl hover:no-underline"
                   >
                     <NuxtLinkLocale
                       :to="to"
@@ -123,16 +123,13 @@ watch(
                       {{ t("nav.contact_us") }}
                     </NuxtLinkLocale>
                   </Button>
-
-                  <AppLangSwitcher @change="isOpen = false" />
                 </div>
               </div>
             </SheetContent>
           </Sheet>
         </div>
-
         <!-- !---- Desktop Menu ----! -->
-        <NavigationMenu class="hidden lg:block">
+        <NavigationMenu class="hidden lg:block ">
           <NavigationMenuList class="flex items-center gap-6">
             <NavigationMenuItem
               v-for="{ to, label, id } in sections"
@@ -216,5 +213,12 @@ watch(
 /* Mobile menu active state */
 .nuxt-link-locale.before\:bg-primary {
   font-weight: 500;
+}
+@media screen and (max-width: 1024px){
+  .logo_response{
+    width: 40.5px;
+height: 41.35px;
+
+  }
 }
 </style>

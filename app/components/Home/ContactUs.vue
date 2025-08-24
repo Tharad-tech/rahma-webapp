@@ -12,7 +12,7 @@ const { t } = useI18n()
         {{ t("forms.contact.title") }}
       </h1>
     </div>
-    <div class="container border border-[#E7E7E7] rounded-3xl">
+    <div class="container lg:border border-[#E7E7E7] rounded-3xl">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 py-16 items-center justify-center">
         <!-- image -->
         <div
