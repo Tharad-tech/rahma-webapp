@@ -4,10 +4,10 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 const stats = computed(() => [
-  { icon: '/img/icons/download.svg', value: 20, label: t('landing.stats.app_downloads') },
-  { icon: '/img/icons/group.svg', value: 20, label: t('landing.stats.active_users') },
-  { icon: '/img/icons/hospital.svg', value: 20, label: t('landing.stats.providers') },
-  { icon: '/img/icons/star.svg', value: 20, label: t('landing.stats.ratings') },
+  { icon: '/img/icons/download.svg', value: 20000, label: t('landing.stats.app_downloads') },
+  { icon: '/img/icons/group.svg', value: 20000, label: t('landing.stats.active_users') },
+  { icon: '/img/icons/hospital.svg', value: 20000, label: t('landing.stats.providers') },
+  { icon: '/img/icons/star.svg', value: 20000, label: t('landing.stats.ratings') },
 ],
 )
 </script>
@@ -18,7 +18,7 @@ const stats = computed(() => [
     class="py-16"
   >
     <div class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-16  lg:gap-y-24 lg:gap-x-30 text-center py-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-16 lg:gap-y-24 lg:gap-x-30 text-center py-14">
         <div
           v-for="(stat, index) in stats"
           :key="index"

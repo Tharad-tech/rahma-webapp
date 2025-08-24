@@ -33,14 +33,16 @@ const switchLanguage = async (code: 'ar' | 'en') => {
       src="/img/icons/Flag_of_Saudi_Arabia1.svg"
       alt="Flag_of_Saudi_Arabia"
       densities="1x 2x"
-      sizes="24"
+      width="24"
+      height="24"
     />
     <NuxtImg
-      v-else-if="l.code === 'en'"
+      v-else
       src="/img/icons/United_kingdom_flag.jpeg"
       alt="United_kingdom_flag"
       densities="1x 2x"
-      sizes="24"
+      width="24"
+      height="24"
     />
   </Button>
 </template>
