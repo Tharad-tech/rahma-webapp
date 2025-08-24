@@ -70,8 +70,9 @@ const onSubmit = handleSubmit(async (values) => {
             />
             <NuxtImg
               src="/img/icons/profile.svg"
-              class="absolute start-0 inset-y-0 m-3 py-3"
-              size="24"
+              class="absolute start-0 inset-y-0 m-3 pt-2 pb-3"
+              width="24"
+              height="24"
             />
           </template>
         </AppFormField>
@@ -92,8 +93,9 @@ const onSubmit = handleSubmit(async (values) => {
             />
             <NuxtImg
               src="/img/icons/sms.svg"
-              class="absolute start-0 inset-y-0 m-3 py-3"
-              size="24"
+              class="absolute start-0 inset-y-0 m-3 pt-2 pb-3"
+              width="24"
+              height="24"
             />
           </template>
         </AppFormField>
@@ -115,8 +117,9 @@ const onSubmit = handleSubmit(async (values) => {
             />
             <NuxtImg
               src="/img/icons/message-text.svg"
-              class="absolute start-0 inset-y-0 m-3 py-3"
-              size="24"
+              class="absolute start-0 inset-y-0 m-3 pt-2 pb-3"
+              width="24"
+              height="24"
             />
           </template>
         </AppFormField>
@@ -125,7 +128,7 @@ const onSubmit = handleSubmit(async (values) => {
       <Button
         type="submit"
         size="lg"
-        class="bg-primary text-white w-full md:w-52 text-xl font-bold"
+        class="bg-primary text-white w-full md:w-52 text-base md:text-xl font-bold"
         variant="default"
         :disabled="isSubmitting"
       >

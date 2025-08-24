@@ -40,9 +40,9 @@ const stats = computed(() => [
           />
           <CounterAnimation
             :number="stat.value"
-            class="text-[24px] font-bold text-primary mt-2"
+            class="text-lg lg:text-3xl font-bold text-primary mt-2"
           />
-          <span class="text-primary md:text-[32px] text-[16px]">{{ stat.label }}</span>
+          <span class="text-primary md:text-3xl text-base">{{ stat.label }}</span>
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ const { t, locale } = useI18n()
           </div>
 
           <div
-            class="flex justify-center lg:justify-start flex-wrap gap-4 mt-10 lg:mt-20"
+            class="flex justify-center lg:justify-start  gap-4 mt-10 lg:mt-20"
           >
             <GooglePlayBadge class="!bg-[#6ACEE5]" />
             <AppStoreBadge class="!bg-[#6ACEE5]" />

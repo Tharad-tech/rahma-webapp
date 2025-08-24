@@ -10,13 +10,13 @@ const { t, locale } = useI18n()
     <div class="container mt-5 ">
       <!-- header -->
       <h2
-        class="text-3xl md:text-4xl font-bold"
+        class="text-2xl md:text-4xl font-bold"
         data-aos="fade-up"
       >
         {{ t("landing.promo.title") }}
       </h2>
       <p
-        class="text-2xl text-balance mt-4 mb-14"
+        class="text-sm md:text-2xl text-balance mt-4 mb-14"
         data-aos="fade-up"
       >
         {{ t("landing.promo.description") }}

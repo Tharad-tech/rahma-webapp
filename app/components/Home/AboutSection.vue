@@ -29,20 +29,19 @@ const aboutServices = [
             "
             alt="About Image"
             format="webp"
-            width="484"
-            height="422"
+            class="w-[344.7px] h-[300px] lg:w-[484px] lg:h-[422px]"
           />
         </div>
         <!-- content -->
         <div class="text-start">
-          <div class="text-4xl 4xl:text-5xl font-bold text-primary mb-8 pt-7">
+          <div class="text-2xl lg:text-4xl 4xl:text-5xl font-bold text-primary mb-8 pt-7">
             <h2
               class="text-primary inline-block text-pretty leading-relaxed mb-4"
             >
               {{ t("landing.about.title") }}
             </h2>
             <p
-              class="text-muted-foreground mb-10 text-lg"
+              class="text-muted-foreground mb-10 text-xs md:text-lg"
               data-aos="fade-up"
             >
               {{ t("landing.about.description") }}
@@ -61,14 +60,12 @@ const aboutServices = [
                 <NuxtImg
                   :src="service.icon"
                   alt="success-icon "
-                  class="w-10 h-10"
-                  width="40"
-                  height="40"
+                  class="w-6 h-6 lg:w-10 lg:h-10"
                   format="webp"
                 />
               </div>
               <div>
-                <p class="text-[24px] text-[#121212]">
+                <p class="text-base md:text-2xl text-[#121212]">
                   {{ t(`landing.about.${service.key}`) }}
                 </p>
               </div>
@@ -81,7 +78,5 @@ const aboutServices = [
 </template>
 
 <style scoped>
-#about::before {
-  background-image: url("/img/bg/about-app-bg.svg");
-}
+
 </style>

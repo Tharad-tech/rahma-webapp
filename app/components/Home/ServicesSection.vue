@@ -26,6 +26,7 @@ const services = [
             alt="App preview"
             height="464.18"
             width="468"
+            class="w-[314px] h-[311px] lg:w-[464px] lg:h-[468px]"
             format="webp"
           />
         </div>
@@ -53,14 +54,12 @@ const services = [
                 <NuxtImg
                   :src="service.icon"
                   alt="success-icon "
-                  class="w-10 h-10"
-                  width="40"
-                  height="40"
+                  class="w-6 h-6 g:w-10 lg:h-10"
                   format="webp"
                 />
               </div>
               <div>
-                <p class="text-[24px] text-[#121212]">
+                <p class="text-xl lg:text-[24px] text-[#121212]">
                   {{ t(`landing.service.${service.key}`) }}
                 </p>
               </div>
