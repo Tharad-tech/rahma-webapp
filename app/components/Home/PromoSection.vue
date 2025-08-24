@@ -57,7 +57,7 @@ const { t, locale } = useI18n()
         class="mt-5 text-center"
         data-aos="zoom-in"
       >
-        <div class="flex flex-wrap justify-center items-center gap-y-4 gap-x-8">
+        <div class="flex justify-center items-center gap-y-4 gap-x-8">
           <GooglePlayBadge />
           <AppStoreBadge />
         </div>

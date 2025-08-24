@@ -13,7 +13,7 @@ const { contact, author } = useAppConfig()
           {{ t("footer.download_now") }}
         </h2>
         <!-- download -->
-        <div class="flex justify-center flex-wrap gap-4 mb-6">
+        <div class="flex justify-center gap-4 mb-6">
           <GooglePlayBadge class="!bg-[#6ACEE5]" />
           <AppStoreBadge class="!bg-[#6ACEE5]" />
         </div>
