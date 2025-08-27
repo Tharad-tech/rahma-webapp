@@ -18,7 +18,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: 'http://landing.qarah.tharadtech.com/api/', // overridden by NUXT_PUBLIC_API_BASE environment variable
+      apiBase: 'https://rahma.tharadtech.com/api/', // overridden by NUXT_PUBLIC_API_BASE environment variable
     },
   },
 
@@ -73,7 +73,7 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_locale',
       redirectOn: 'root',
     },
-    baseUrl: 'https://qarah-app.com',
+    baseUrl: 'https://rahma.tharadtech.com/api/',
   },
 
   image: {
