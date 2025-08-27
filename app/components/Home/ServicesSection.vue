@@ -1,6 +1,8 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 
+const { data } = await useFetch('https://rahma.tharadtech.com/api/services')
+
 const { t, locale } = useI18n()
 
 const services = [
@@ -22,7 +24,7 @@ const services = [
         <div class=" lg:col-span-2 lg:flex justify-center">
           <NuxtImg
             data-aos="fade-up"
-            :src="locale === 'ar' ? '/img/screens/services-screen-ar.png' : '/img/screens/services-screen-en.png'"
+            :src="data.value?.data.icon ||locale === 'ar' ? '/img/screens/services-screen-ar.png' : '/img/screens/services-screen-en.png'"
             alt="App preview"
             height="464.18"
             width="468"
@@ -34,7 +36,7 @@ const services = [
         <!-- services -->
         <div class="lg:col-span-3 text-start lg:mt-4">
           <h2 class="text-primary text-2xl md:text-4xl font-bold mb-7 border-b-4  border-[#6ACEE5] w-fit pb-3 ">
-            {{ t('landing.service.our_services') }}
+            {{ data.value?.data.title || t('landing.service.our_services') }}
           </h2>
           <p
             data-aos="fade-up"
