@@ -28,7 +28,6 @@ const onSubmit = handleSubmit(async (values) => {
       method: 'POST',
       body: values,
     })
-
     toast({
       title: t('forms.contact.success_title'),
       description: t('forms.contact.success_message'),

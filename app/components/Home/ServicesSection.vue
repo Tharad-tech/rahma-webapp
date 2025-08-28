@@ -35,7 +35,7 @@ if (data.value && data.value.data) {
                 ? '/img/screens/about-screen-ar.png'
                 : '/img/screens/about-screen-en.png'
             "
-            :alt="t('landing.about.imageAlt')"
+            alt="mobile image explain the feature in our website"
             format="webp"
             class="w-[344.7px] h-[300px] lg:w-[484px] lg:h-[422px] rounded-lg shadow-lg transition-all duration-500 hover:shadow-xl"
             loading="lazy"

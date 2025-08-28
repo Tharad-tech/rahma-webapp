@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
-// const { t } = useI18n()
-
 const stats = ref([])
 const { data } = await useFetch(`https://rahma.tharadtech.com/api/statistics`)
 if (data.value && data.value.data) {

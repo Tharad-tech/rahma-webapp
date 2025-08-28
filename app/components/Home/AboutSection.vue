@@ -60,7 +60,7 @@ if (data.value && data.value.data) {
               <div>
                 <NuxtImg
                   :src="service.icon"
-                  alt="success-icon "
+                  alt="service.key "
                   class="w-6 h-6 g:w-10 lg:h-10"
                   format="webp"
                 />
