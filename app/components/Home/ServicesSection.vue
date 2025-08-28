@@ -10,7 +10,6 @@ if (data.value && data.value.data) {
     services.value.push({
       key: element.title || '',
       icon: element.icon,
-
     })
   })
 }
@@ -18,7 +17,7 @@ if (data.value && data.value.data) {
 
 <template>
   <section
-    id="about"
+    id="services"
     class="py-16 bg-secondary/10"
   >
     <div class="container mx-auto px-4">
