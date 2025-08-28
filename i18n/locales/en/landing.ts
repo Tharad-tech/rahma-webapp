@@ -6,10 +6,10 @@ export default {
   service: {
     our_services: 'App Features',
     services_description: 'We designed the app to provide you with a comfortable, secure, and fast medical consultation… without complications and without wasting your time.',
-    remote_booking: 'Book remote sessions.',
-    call_or_video: 'Call or video as per your choice.',
-    certified_professionals: 'Certified doctors and nurses.',
-    privacy_security: 'Complete privacy and security.',
+    // remote_booking: 'Book remote sessions.',
+    // call_or_video: 'Call or video as per your choice.',
+    // certified_professionals: 'Certified doctors and nurses.',
+    // privacy_security: 'Complete privacy and security.',
   },
   promo: {
     title: 'Healthcare… Simply and Quickly',

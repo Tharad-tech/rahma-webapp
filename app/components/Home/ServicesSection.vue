@@ -1,16 +1,21 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 
-const { data } = await useFetch('https://rahma.tharadtech.com/api/services')
-
 const { t, locale } = useI18n()
+const { data } = await useFetch('https://rahma.tharadtech.com/api/about-us')
 
-const services = [
-  { key: 'remote_booking', icon: '/img/icons/success-icon.svg' },
-  { key: 'call_or_video', icon: '/img/icons/success-icon.svg' },
-  { key: 'certified_professionals', icon: '/img/icons/success-icon.svg' },
-  { key: 'privacy_security', icon: '/img/icons/success-icon.svg' },
-]
+// Initialize with default values
+const services = ref([])
+
+if (data.value && data.value.data) {
+  data.value.data.forEach((element) => {
+    services.value.push({
+      key: element.title || '',
+      icon: '/img/icons/success-icon.svg',
+
+    })
+  })
+}
 </script>
 
 <template>
@@ -24,7 +29,7 @@ const services = [
         <div class=" lg:col-span-2 lg:flex justify-center">
           <NuxtImg
             data-aos="fade-up"
-            :src="data.value?.data.icon ||locale === 'ar' ? '/img/screens/services-screen-ar.png' : '/img/screens/services-screen-en.png'"
+            :src="locale === 'ar' ? '/img/screens/services-screen-ar.png' : '/img/screens/services-screen-en.png'"
             alt="App preview"
             height="464.18"
             width="468"
@@ -36,7 +41,7 @@ const services = [
         <!-- services -->
         <div class="lg:col-span-3 text-start lg:mt-4">
           <h2 class="text-primary text-2xl md:text-4xl font-bold mb-7 border-b-4  border-[#6ACEE5] w-fit pb-3 ">
-            {{ data.value?.data.title || t('landing.service.our_services') }}
+            {{ t('landing.service.our_services') }}
           </h2>
           <p
             data-aos="fade-up"
@@ -62,7 +67,7 @@ const services = [
               </div>
               <div>
                 <p class="text-xl lg:text-[24px] text-[#121212]">
-                  {{ t(`landing.service.${service.key}`) }}
+                  {{ service.key }}
                 </p>
               </div>
             </div>

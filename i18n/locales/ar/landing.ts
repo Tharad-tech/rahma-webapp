@@ -6,10 +6,10 @@ export default {
   service: {
     our_services: 'مزايا التطبيق',
     services_description: 'صممنا التطبيق عشان نوفّر لك استشارة طبية مريحة، آمنة، وسريعة… من غير تعقيد، ومن غير ما تضيع وقتك.',
-    remote_booking: 'حجز جلسات عن بُعد.',
-    call_or_video: 'مكالمة أو فيديو حسب الاختيار.',
-    certified_professionals: 'أطباء وممرضين معتمدين.',
-    privacy_security: 'خصوصية وأمان تام.',
+    // remote_booking: 'حجز جلسات عن بُعد.',
+    // call_or_video: 'مكالمة أو فيديو حسب الاختيار.',
+    // certified_professionals: 'أطباء وممرضين معتمدين.',
+    // privacy_security: 'خصوصية وأمان تام.',
   },
   promo: {
     title: 'رعاية طبية… ببساطة وسرعة',
