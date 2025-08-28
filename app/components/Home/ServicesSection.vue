@@ -1,17 +1,15 @@
-<script setup>
-import { useI18n } from 'vue-i18n'
-
+<script setup lang="ts">
 const { t, locale } = useI18n()
-const { data } = await useFetch('https://rahma.tharadtech.com/api/about-us')
 
-// Initialize with default values
+const { data } = await useFetch('https://rahma.tharadtech.com/api/services')
+
 const services = ref([])
 
 if (data.value && data.value.data) {
   data.value.data.forEach((element) => {
     services.value.push({
       key: element.title || '',
-      icon: '/img/icons/success-icon.svg',
+      icon: element.icon,
 
     })
   })
@@ -20,53 +18,68 @@ if (data.value && data.value.data) {
 
 <template>
   <section
-    id="service"
-    class="py-16"
+    id="about"
+    class="py-16 bg-secondary/10"
   >
-    <div class="container">
-      <div class="flex flex-col-reverse items-center lg:grid lg:grid-cols-5 gap-24 lg:justify-evenly">
-        <!-- image -->
-        <div class=" lg:col-span-2 lg:flex justify-center">
+    <div class="container mx-auto px-4">
+      <div
+        class="lg:grid lg:grid-cols-2 gap-24 flex justify-center items-center flex-col-reverse"
+      >
+        <!-- Image section -->
+        <div
+          class="flex justify-center"
+          data-aos="fade-right"
+        >
           <NuxtImg
-            data-aos="fade-up"
-            :src="locale === 'ar' ? '/img/screens/services-screen-ar.png' : '/img/screens/services-screen-en.png'"
-            alt="App preview"
-            height="464.18"
-            width="468"
-            class="w-[314px] h-[311px] lg:w-[464px] lg:h-[468px]"
+            :src="
+              locale === 'ar'
+                ? '/img/screens/about-screen-ar.png'
+                : '/img/screens/about-screen-en.png'
+            "
+            :alt="t('landing.about.imageAlt')"
             format="webp"
+            class="w-[344.7px] h-[300px] lg:w-[484px] lg:h-[422px] rounded-lg shadow-lg transition-all duration-500 hover:shadow-xl"
+            loading="lazy"
           />
         </div>
 
-        <!-- services -->
-        <div class="lg:col-span-3 text-start lg:mt-4">
-          <h2 class="text-primary text-2xl md:text-4xl font-bold mb-7 border-b-4  border-[#6ACEE5] w-fit pb-3 ">
-            {{ t('landing.service.our_services') }}
-          </h2>
-          <p
-            data-aos="fade-up"
-            class="text-secondary-foreground text-lg mb-10 md:w-5/6"
-          >
-            {{ t('landing.service.services_description') }}
-          </p>
-          <div class=" mt-6 flex flex-col items-start gap-6 justify-center">
+        <!-- Content section -->
+        <div class="text-start">
+          <div class="text-2xl lg:text-4xl 4xl:text-5xl font-bold text-primary mb-8 pt-7">
+            <h2
+              class="text-primary inline-block text-pretty leading-relaxed mb-4"
+              data-aos="fade-left"
+            >
+              {{ t("landing.about.title") }}
+            </h2>
+            <p
+              class="text-muted-foreground mb-10 text-xs md:text-lg leading-relaxed"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              {{ t("landing.about.description") }}
+            </p>
+          </div>
+
+          <div class="mt-6 flex flex-col items-start gap-6 justify-center">
             <div
               v-for="(service, index) in services"
               :key="index"
-              class="flex items-center md:flex-row  gap-5"
+              class="flex items-center gap-5 group hover:translate-x-2 transition-transform duration-300"
               data-aos="fade-up"
-              data-aos-delay="100"
+              :data-aos-delay="100 + (index * 100)"
             >
-              <div>
+              <div class="p-2 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                 <NuxtImg
                   :src="service.icon"
-                  alt="success-icon "
-                  class="w-6 h-6 g:w-10 lg:h-10"
+                  :alt="service.key"
+                  class="w-6 h-6 lg:w-10 lg:h-10"
                   format="webp"
+                  loading="lazy"
                 />
               </div>
               <div>
-                <p class="text-xl lg:text-[24px] text-[#121212]">
+                <p class="text-base md:text-xl text-[#121212] font-medium">
                   {{ service.key }}
                 </p>
               </div>
@@ -78,4 +91,6 @@ if (data.value && data.value.data) {
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

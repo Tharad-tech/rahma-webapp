@@ -1,56 +1,57 @@
-<script setup lang="ts">
+<script setup>
+import { useI18n } from 'vue-i18n'
+
 const { t, locale } = useI18n()
-const aboutServices = [
-  { key: 'feature1', icon: '/img/icons/success-icon.svg' },
-  { key: 'feature2', icon: '/img/icons/success-icon.svg' },
-  { key: 'feature3', icon: '/img/icons/success-icon.svg' },
-  { key: 'feature4', icon: '/img/icons/success-icon.svg' },
-  { key: 'feature5', icon: '/img/icons/success-icon.svg' },
-]
+const { data } = await useFetch('https://rahma.tharadtech.com/api/about-us')
+
+// Initialize with default values
+const aboutFeature = ref([])
+
+if (data.value && data.value.data) {
+  data.value.data.forEach((element) => {
+    aboutFeature.value.push({
+      key: element.title || '',
+      icon: '/img/icons/success-icon.svg',
+
+    })
+  })
+}
 </script>
 
 <template>
   <section
     id="about"
-    class="py-16 bg-secondary/10"
+    class="py-16"
   >
     <div class="container">
-      <div
-        class="lg:grid lg:grid-cols-2 gap-24 flex justify-center items-center flex-col-reverse"
-      >
-        <!-- image  -->
-        <div class="flex">
+      <div class="flex flex-col-reverse items-center lg:grid lg:grid-cols-5 gap-24 lg:justify-evenly">
+        <!-- image -->
+        <div class=" lg:col-span-2 lg:flex justify-center">
           <NuxtImg
             data-aos="fade-up"
-            :src="
-              locale === 'ar'
-                ? '/img/screens/about-screen-ar.png'
-                : '/img/screens/about-screen-en.png'
-            "
-            alt="About Image"
+            :src="locale === 'ar' ? '/img/screens/services-screen-ar.png' : '/img/screens/services-screen-en.png'"
+            alt="App preview"
+            height="464.18"
+            width="468"
+            class="w-[314px] h-[311px] lg:w-[464px] lg:h-[468px]"
             format="webp"
-            class="w-[344.7px] h-[300px] lg:w-[484px] lg:h-[422px]"
           />
         </div>
-        <!-- content -->
-        <div class="text-start">
-          <div class="text-2xl lg:text-4xl 4xl:text-5xl font-bold text-primary mb-8 pt-7">
-            <h2
-              class="text-primary inline-block text-pretty leading-relaxed mb-4"
-            >
-              {{ t("landing.about.title") }}
-            </h2>
-            <p
-              class="text-muted-foreground mb-10 text-xs md:text-lg"
-              data-aos="fade-up"
-            >
-              {{ t("landing.about.description") }}
-            </p>
-          </div>
 
+        <!-- services -->
+        <div class="lg:col-span-3 text-start lg:mt-4">
+          <h2 class="text-primary text-2xl md:text-4xl font-bold mb-7 border-b-4  border-[#6ACEE5] w-fit pb-3 ">
+            {{ t('landing.service.our_services') }}
+          </h2>
+          <p
+            data-aos="fade-up"
+            class="text-secondary-foreground text-lg mb-10 md:w-5/6"
+          >
+            {{ t('landing.service.services_description') }}
+          </p>
           <div class=" mt-6 flex flex-col items-start gap-6 justify-center">
             <div
-              v-for="(service, index) in aboutServices"
+              v-for="(service, index) in aboutFeature"
               :key="index"
               class="flex items-center md:flex-row  gap-5"
               data-aos="fade-up"
@@ -60,13 +61,13 @@ const aboutServices = [
                 <NuxtImg
                   :src="service.icon"
                   alt="success-icon "
-                  class="w-6 h-6 lg:w-10 lg:h-10"
+                  class="w-6 h-6 g:w-10 lg:h-10"
                   format="webp"
                 />
               </div>
               <div>
-                <p class="text-base md:text-2xl text-[#121212]">
-                  {{ t(`landing.about.${service.key}`) }}
+                <p class="text-xl lg:text-[24px] text-[#121212]">
+                  {{ service.key }}
                 </p>
               </div>
             </div>
@@ -77,6 +78,4 @@ const aboutServices = [
   </section>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

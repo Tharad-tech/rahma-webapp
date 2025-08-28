@@ -12,9 +12,9 @@ useHead(() => ({
 <template>
   <div class="min-h-80">
     <HomeHeroSection />
-    <HomeServicesSection />
-    <HomePromoSection />
     <HomeAboutSection />
+    <HomePromoSection />
+    <HomeServicesSection />
     <HomeStateSection />
     <HomeContactUs />
   </div>
