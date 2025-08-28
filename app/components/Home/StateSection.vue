@@ -1,15 +1,22 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+// const { t } = useI18n()
 
-const stats = computed(() => [
-  { icon: '/img/icons/download.svg', value: 20000, label: t('landing.stats.app_downloads') },
-  { icon: '/img/icons/group.svg', value: 20000, label: t('landing.stats.active_users') },
-  { icon: '/img/icons/hospital.svg', value: 20000, label: t('landing.stats.providers') },
-  { icon: '/img/icons/star.svg', value: 20000, label: t('landing.stats.ratings') },
-],
-)
+const stats = ref([])
+const { data } = await useFetch(`https://rahma.tharadtech.com/api/statistics`)
+console.log(data.value?.data)
+if (data.value && data.value.data) {
+  data.value.data.forEach((state) => {
+    console.log(stats.value)
+    stats.value.push({
+      icon: state.icon,
+      value: state.number,
+      label: state.title || '',
+    })
+    console.log(stats.value)
+  })
+}
 </script>
 
 <template>
