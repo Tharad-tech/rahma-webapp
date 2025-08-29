@@ -2,7 +2,8 @@
 import logoWhite from '@/assets/img/logo-white.svg'
 
 const { t } = useI18n()
-const { contact, author } = useAppConfig()
+const { settings } = useSettings()
+const { author } = useAppConfig()
 </script>
 
 <template>
@@ -67,7 +68,7 @@ const { contact, author } = useAppConfig()
           <div class="flex justify-center md:justify-end items-center gap-2 md:gap-4">
             <!-- twitter -->
             <NuxtLink
-              :to="contact.twitter"
+              :to="settings.x_link"
               external
               class="text-white flex justify-center items-center size-10 border rounded-full p-2 hover:bg-white/10 transition-colors duration-300"
             ><Icon
@@ -76,7 +77,7 @@ const { contact, author } = useAppConfig()
             /></NuxtLink>
             <!-- instagram -->
             <NuxtLink
-              :to="contact.instagram"
+              :to="settings.insta_link"
               external
               class="text-white flex justify-center items-center size-10 border rounded-full p-2 hover:bg-white/10 transition-colors duration-300"
             ><Icon
@@ -85,7 +86,7 @@ const { contact, author } = useAppConfig()
             /></NuxtLink>
             <!-- facebook -->
             <NuxtLink
-              :to="contact.facebook"
+              :to="settings.facebook_link"
               external
               class="text-white flex justify-center items-center size-10 border rounded-full p-2 hover:bg-white/10 transition-colors duration-300"
             ><Icon
@@ -94,7 +95,7 @@ const { contact, author } = useAppConfig()
             /></NuxtLink>
             <!-- whatsapp -->
             <NuxtLink
-              :to="contact.whatsapp"
+              :to="settings.whatsapp_number"
               external
               class="text-white flex justify-center items-center size-10 border rounded-full p-2 hover:bg-white/10 transition-colors duration-300"
             ><Icon

@@ -3,12 +3,12 @@ import enBadge from '@/assets/img/badges/app-store-en.svg'
 import arBadge from '@/assets/img/badges/app-store-ar.svg'
 
 const { locale } = useI18n()
-const { app } = useAppConfig()
+const { settings } = useSettings()
 </script>
 
 <template>
   <a
-    :href="app.ios"
+    :href="settings.apple_store_url"
     target="_blank"
     class="bg-primary rounded-lg p-4 flex justify-center items-center"
   >
