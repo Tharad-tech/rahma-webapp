@@ -7,7 +7,7 @@ const { author } = useAppConfig()
 </script>
 
 <template>
-  <footer class="bg-[#020A4C] text-white pt-32">
+  <footer class="bg-[#020A4C] text-white pt-10  md:pt-32">
     <div class="container">
       <div class="mx-auto text-center px-4">
         <h2 class="text-2xl lg:text-3xl font-medium mb-6">
@@ -19,7 +19,7 @@ const { author } = useAppConfig()
           <AppStoreBadge class="!bg-[#6ACEE5]" />
         </div>
         <!-- develop by -->
-        <p class="text-xl mb-12">
+        <p class="text-xs md:text-xl pt-4 pb-3 md:mb-12">
           {{ t("footer.developed_by") }}
           <a
             :href="author.url"
@@ -30,7 +30,7 @@ const { author } = useAppConfig()
           }}</a>
         </p>
       </div>
-      <div class="flex md:hidden justify-center items-center gap-5 md:gap-10 text-base lg:text-lg">
+      <div class="flex md:hidden justify-center items-center gap-5 md:gap-10 text-base lg:text-lg pt-3 pb-12">
             <!-- term -->
             <NuxtLinkLocale
               to="/terms-of-use"
@@ -53,7 +53,7 @@ const { author } = useAppConfig()
         class="container"
       >
         <div class="grid grid-cols-2 md:grid-cols-3 place-content-between gap-4">
-          <div class="flex md:justify-start justify-center">
+          <div class="flex justify-start">
             <img
               :src="logoWhite"
               alt="Rahma Logo"
