@@ -7,8 +7,8 @@ const isRtl = computed(() => locale.value === 'ar')
 
 const sections = computed(() => [
   { id: 'hero', to: '/#hero', label: t('nav.home') },
-  { id: 'service', to: '/#service', label: t('nav.services') },
   { id: 'about', to: '/#about', label: t('nav.about') },
+  { id: 'service', to: '/#service', label: t('nav.services') },
   { id: 'contact', to: '/#contact', label: t('nav.contact') },
 ])
 
