@@ -5,7 +5,7 @@ const { t } = useI18n()
 <template>
   <section
     id="contact"
-    class="py-16 "
+    class="py-10 md:py-16  "
   >
     <div class="flex justify-center items-center w-full text-primary font-bold text-2xl md:text-4xl">
       <h1 class=" p-4 border-b-4 border-[#020A4C] mb-10">

@@ -1,7 +1,7 @@
 export default {
   contact: {
     title: ' تواصل معنا',
-    full_name: 'الاسم كامل',
+    full_name: ' الاسم بالكامل',
     email: 'البريد الإلكتروني',
     message: '  استفسارك',
     required_error: 'هذا الحقل مطلوب.',

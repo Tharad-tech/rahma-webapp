@@ -30,13 +30,29 @@ const { author } = useAppConfig()
           }}</a>
         </p>
       </div>
+      <div class="flex md:hidden justify-center items-center gap-5 md:gap-10 text-base lg:text-lg">
+            <!-- term -->
+            <NuxtLinkLocale
+              to="/terms-of-use"
+              class="hover:underline underline-offset-8"
+            >
+              {{ t('footer.privacy_policy') }}
+            </NuxtLinkLocale>
+            <!-- privacy -->
+            <NuxtLinkLocale
+              to="/terms-and-conditions"
+              class="hover:underline underline-offset-8"
+            >
+              {{ t('footer.terms') }}
+            </NuxtLinkLocale>
+          </div>
     </div>
     <hr class="mx-8">
     <div class="mt-6 py-6">
       <div
         class="container"
       >
-        <div class="grid grid-cols-1 md:grid-cols-3 place-content-between gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 place-content-between gap-4">
           <div class="flex md:justify-start justify-center">
             <img
               :src="logoWhite"
@@ -46,9 +62,7 @@ const { author } = useAppConfig()
             >
           </div>
 
-          <div
-            class="flex justify-center items-center gap-5 md:gap-10 text-base lg:text-lg"
-          >
+          <div class="hidden md:flex justify-center items-center gap-5 md:gap-10 text-base lg:text-lg">
             <!-- term -->
             <NuxtLinkLocale
               to="/terms-of-use"

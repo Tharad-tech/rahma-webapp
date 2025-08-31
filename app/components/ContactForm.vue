@@ -127,7 +127,7 @@ const onSubmit = handleSubmit(async (values) => {
       <Button
         type="submit"
         size="lg"
-        class="bg-primary text-white w-full md:w-52 text-base md:text-xl font-bold"
+        class="bg-primary text-white w-52 text-base md:text-xl font-bold"
         variant="default"
         :disabled="isSubmitting"
       >
