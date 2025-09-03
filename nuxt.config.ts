@@ -73,7 +73,7 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_locale',
       redirectOn: 'root',
     },
-    baseUrl: 'https://rahma.tharadtech.com/api/',
+    baseUrl: 'https://api.rahma.tharadtech.com/api/',
   },
 
   image: {
