@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const stats = ref([])
+const config = useRuntimeConfig()
 const { data } = await useFetch(`${config.public.apiBase}/statistics`)
 if (data.value && data.value.data) {
   data.value.data.forEach((state) => {
