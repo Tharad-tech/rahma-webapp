@@ -56,7 +56,7 @@ const onSubmit = handleSubmit(async (values) => {
       <div class="col-span-3">
         <!-- name -->
         <AppFormField
-          name="name"
+          name="first_name"
           required
         >
           <template #default="{ componentField }">

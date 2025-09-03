@@ -4,7 +4,7 @@ import { z } from 'zod'
 export function createContactUsSchema() {
   const { t } = useI18n()
   return z.object({
-    name: z.string({
+    first_name: z.string({
       required_error: t('forms.contact.required_error'),
     }).min(3, t('forms.contact.name_error')),
     email: z.string({
