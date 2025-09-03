@@ -8,16 +8,15 @@ const services = ref([])
 if (data.value && data.value.data) {
   data.value.data.forEach((element) => {
     services.value.push({
-  key: element.title,
-  icon: element.icon
-})
-
+      key: element.title,
+      icon: element.icon,
+    })
   })
 }
 </script>
 
 <template>
-  <!--ليه تستنى؟ الرعاية الصحية بقت أسهل!  -->
+  <!-- ليه تستنى؟ الرعاية الصحية بقت أسهل!  -->
   <section
     id="service"
     class="py-16 bg-secondary/10"
