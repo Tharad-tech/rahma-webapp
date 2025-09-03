@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
 
-const { data } = await useFetch('https://rahma.tharadtech.com/api/services')
-
+const { data } = await useFetch(`${config.public.apiBase}/services`)
+console.log(data)
 const services = ref([])
 
 if (data.value && data.value.data) {

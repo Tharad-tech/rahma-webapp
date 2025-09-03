@@ -18,7 +18,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: 'https://rahma.tharadtech.com/api/', // overridden by NUXT_PUBLIC_API_BASE environment variable
+      apiBase: 'https://api.rahma.tharadtech.com/api', // overridden by NUXT_PUBLIC_API_BASE environment variable
     },
   },
 

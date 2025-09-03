@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const stats = ref([])
-const { data } = await useFetch(`https://rahma.tharadtech.com/api/statistics`)
+const { data } = await useFetch(`${config.public.apiBase}/statistics`)
 if (data.value && data.value.data) {
   data.value.data.forEach((state) => {
     stats.value.push({

@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
-const { data } = await useFetch('https://rahma.tharadtech.com/api/about-us')
+const { data } = await useFetch(`${config.public.apiBase}/about-us`)
 
 // Initialize with default values
 const aboutFeature = ref([])

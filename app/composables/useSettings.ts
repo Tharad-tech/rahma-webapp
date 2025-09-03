@@ -6,7 +6,7 @@ export const useSettings = () => {
   const fetchSettings = async () => {
     if (settings.value) return settings
 
-    const { data, error } = await useFetch('https://api.rahma.tharadtech.com/api/settings')
+    const { data, error } = await useFetch(`${config.public.apiBase}/settings`)
 
     if (error.value) {
       console.error('Failed to load settings:', error.value)
