@@ -41,9 +41,7 @@ const { t, locale } = useI18n()
                 : '/img/screens/hero-screen-en.png'
             "
             alt="App Mockup"
-            height="545"
-            width="420"
-            class="mx-auto"
+            class="mx-auto w-[324px] h-[421px]  md:w-[420px] md:h-[545px]"
             format="webp"
           />
         </div>
