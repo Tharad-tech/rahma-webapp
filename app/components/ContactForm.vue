@@ -69,6 +69,7 @@ const onSubmit = handleSubmit(async (values) => {
             />
             <NuxtImg
               src="/img/icons/profile.svg"
+              alt='profile icon '
               class="absolute start-0 inset-y-0 m-3 pt-2 pb-3"
               width="24"
               height="24"
@@ -92,6 +93,7 @@ const onSubmit = handleSubmit(async (values) => {
             />
             <NuxtImg
               src="/img/icons/sms.svg"
+              alt='email icon'
               class="absolute start-0 inset-y-0 m-3 pt-2 pb-3"
               width="24"
               height="24"
@@ -116,6 +118,7 @@ const onSubmit = handleSubmit(async (values) => {
             />
             <NuxtImg
               src="/img/icons/message-text.svg"
+              alt='message text icon'
               class="absolute start-0 inset-y-0 m-3 pt-1 pb-3"
               width="24"
               height="24"

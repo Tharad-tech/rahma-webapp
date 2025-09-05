@@ -88,6 +88,7 @@ const { author } = useAppConfig()
             ><Icon
               name="mdi:twitter"
               size="20"
+              alt="twitter icon"
             /></NuxtLink>
             <!-- instagram -->
             <NuxtLink
@@ -97,6 +98,7 @@ const { author } = useAppConfig()
             ><Icon
               name="mdi:instagram"
               size="20"
+              alt="instagram icon"
             /></NuxtLink>
             <!-- facebook -->
             <NuxtLink
@@ -106,6 +108,7 @@ const { author } = useAppConfig()
             ><Icon
               name="ri:facebook-fill"
               size="20"
+              alt="facebook icon"
             /></NuxtLink>
             <!-- whatsapp -->
             <NuxtLink
@@ -115,6 +118,7 @@ const { author } = useAppConfig()
             ><Icon
               name="mdi:whatsapp"
               size="20"
+              alt="whatsapp icon"
             /></NuxtLink>
           </div>
         </div>
