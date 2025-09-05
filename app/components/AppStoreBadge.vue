@@ -18,6 +18,7 @@ const { settings } = useSettings()
       height="36"
       width="165"
       class="pointer-events-none -mb-1"
+      format="webp"
     >
   </a>
 </template>

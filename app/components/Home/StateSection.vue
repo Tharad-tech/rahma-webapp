@@ -38,6 +38,7 @@ if (data.value && data.value.data) {
             :src="stat.icon"
             alt="Icon for state"
             class="text-primary size-[50px]"
+            format="webp"
           />
           <CounterAnimation
             :number="stat.value"

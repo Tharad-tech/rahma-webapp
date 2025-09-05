@@ -31,21 +31,21 @@ const { author } = useAppConfig()
         </p>
       </div>
       <div class="flex md:hidden justify-center items-center gap-5 md:gap-10 text-base lg:text-lg pt-3 pb-12">
-            <!-- term -->
-            <NuxtLinkLocale
-              to="/terms-of-use"
-              class="hover:underline underline-offset-8"
-            >
-              {{ t('footer.privacy_policy') }}
-            </NuxtLinkLocale>
-            <!-- privacy -->
-            <NuxtLinkLocale
-              to="/terms-and-conditions"
-              class="hover:underline underline-offset-8"
-            >
-              {{ t('footer.terms') }}
-            </NuxtLinkLocale>
-          </div>
+        <!-- term -->
+        <NuxtLinkLocale
+          to="/terms-of-use"
+          class="hover:underline underline-offset-8"
+        >
+          {{ t('footer.privacy_policy') }}
+        </NuxtLinkLocale>
+        <!-- privacy -->
+        <NuxtLinkLocale
+          to="/terms-and-conditions"
+          class="hover:underline underline-offset-8"
+        >
+          {{ t('footer.terms') }}
+        </NuxtLinkLocale>
+      </div>
     </div>
     <hr class="mx-8">
     <div class="mt-6 py-6">

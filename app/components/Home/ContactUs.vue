@@ -24,6 +24,7 @@ const { t } = useI18n()
             loading="lazy"
             width="429"
             height="369"
+            format="webp"
           />
         </div>
         <!-- form -->
