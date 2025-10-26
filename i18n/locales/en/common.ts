@@ -18,4 +18,5 @@ export default {
     terms: 'Terms & Conditions',
     privacy_policy: 'Privacy Policy',
   },
+
 }

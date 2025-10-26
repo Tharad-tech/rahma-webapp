@@ -18,4 +18,5 @@ export default {
     terms: 'الشروط والأحكام',
     privacy_policy: 'سياسة الاستخدام',
   },
+
 }

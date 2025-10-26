@@ -1,4 +1,4 @@
-<script setup lang="ts">
+x <script setup lang="ts">
 import logo from '@/assets/img/logo.svg'
 
 const { t, locale } = useI18n()
