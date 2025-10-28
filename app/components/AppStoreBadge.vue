@@ -1,26 +1,29 @@
 <script lang="ts" setup>
-import enBadge from '@/assets/img/badges/app-store-en.svg'
-import arBadge from '@/assets/img/badges/app-store-ar.svg'
-
-const { locale } = useI18n()
+const { t } = useI18n()
 const { settings } = useSettings()
 </script>
 
 <template>
-  <a
-    :href="settings.apple_store_url"
-    target="_blank"
+  <NuxtLinkLocale
+    :to="settings.apple_store_url"
     class="bg-primary rounded-lg p-4 flex justify-center items-center"
   >
-    <img
-      :src="locale === 'ar' ? arBadge : enBadge"
-      alt="App Store"
-      height="36"
-      width="165"
-      class="pointer-events-none -mb-1"
-      format="webp"
-    >
-  </a>
+    <div class="flex flex-row gap-3">
+      <NuxtImg
+        src="/img/icons/app-store.svg"
+        alt="App Store"
+        class="md:w-9 md:h-9 w-[25px] h-[25px]"
+      />
+      <div class="flex flex-col items-center text-white">
+        <p class="text-sm">
+          {{ t("get") }}
+        </p>
+        <p class="text-xl font-bold">
+          App Store
+        </p>
+      </div>
+    </div>
+  </NuxtLinkLocale>
 </template>
 
 <style scoped></style>

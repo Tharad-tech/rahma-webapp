@@ -13,6 +13,7 @@ export default {
     contact_us: 'Contact Us',
   },
   footer: {
+    get_it: 'Get it now',
     download_now: 'What are you waiting for? Download now!',
     developed_by: 'Developed and operated by',
     terms: 'Terms & Conditions',

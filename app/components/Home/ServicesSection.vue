@@ -1,17 +1,32 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
-const config = useRuntimeConfig()
-const { data } = await useFetch(`${config.public.apiBase}/services`)
-const services = ref([])
-
-if (data.value && data.value.data) {
-  data.value.data.forEach((element) => {
-    services.value.push({
-      key: element.title,
-      icon: element.icon,
-    })
-  })
-}
+const items = [
+  {
+    id: 1,
+    title: t('landing.about.feature1'),
+    icon: '/img/icons/success-icon.svg',
+  },
+  {
+    id: 2,
+    title: t('landing.about.feature2'),
+    icon: '/img/icons/success-icon.svg',
+  },
+  {
+    id: 3,
+    title: t('landing.about.feature3'),
+    icon: '/img/icons/success-icon.svg',
+  },
+  {
+    id: 4,
+    title: t('landing.about.feature4'),
+    icon: '/img/icons/success-icon.svg',
+  },
+  {
+    id: 5,
+    title: t('landing.about.feature5'),
+    icon: '/img/icons/success-icon.svg',
+  },
+]
 </script>
 
 <template>
@@ -44,7 +59,9 @@ if (data.value && data.value.data) {
 
         <!-- Content section -->
         <div class="text-start">
-          <div class="text-2xl lg:text-4xl 4xl:text-5xl font-bold text-primary mb-8 pt-7">
+          <div
+            class="text-2xl lg:text-4xl 4xl:text-5xl font-bold text-primary mb-8 pt-7"
+          >
             <h2
               class="text-primary inline-block text-pretty leading-relaxed mb-4"
               data-aos="fade-left"
@@ -62,16 +79,18 @@ if (data.value && data.value.data) {
 
           <div class="mt-6 flex flex-col items-start gap-6 justify-center">
             <div
-              v-for="(service, index) in services"
-              :key="index"
+              v-for="item in items"
+              :key="item.id"
               class="flex items-center gap-5 group hover:translate-x-2 transition-transform duration-300"
               data-aos="fade-up"
-              :data-aos-delay="100 + (index * 100)"
+              :data-aos-delay="100 + item.id * 100"
             >
-              <div class="p-2 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
+              <div
+                class="p-2 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors"
+              >
                 <NuxtImg
-                  :src="service.icon"
-                  :alt="service.key"
+                  :src="item.icon"
+                  :alt="item.title"
                   class="w-6 h-6 lg:w-10 lg:h-10"
                   format="webp"
                   loading="lazy"
@@ -79,7 +98,7 @@ if (data.value && data.value.data) {
               </div>
               <div>
                 <p class="text-base md:text-xl text-[#121212] font-medium">
-                  {{ service.key }}
+                  {{ item.title }}
                 </p>
               </div>
             </div>
@@ -90,6 +109,4 @@ if (data.value && data.value.data) {
   </section>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

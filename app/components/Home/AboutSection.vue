@@ -2,21 +2,29 @@
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
-const config = useRuntimeConfig()
-const { data } = await useFetch(`${config.public.apiBase}/about-us`)
 
-// Initialize with default values
-const aboutFeature = ref([])
-
-if (data.value && data.value.data) {
-  data.value.data.forEach((element) => {
-    aboutFeature.value.push({
-      key: element.title || '',
-      icon: '/img/icons/success-icon.svg',
-
-    })
-  })
-}
+const items = [
+  {
+    id: 1,
+    title: t('landing.about.feature1'),
+    icon: '/img/icons/success-icon.svg',
+  },
+  {
+    id: 2,
+    title: t('landing.about.feature2'),
+    icon: '/img/icons/success-icon.svg',
+  },
+  {
+    id: 3,
+    title: t('landing.about.feature3'),
+    icon: '/img/icons/success-icon.svg',
+  },
+  {
+    id: 4,
+    title: t('landing.about.feature4'),
+    icon: '/img/icons/success-icon.svg',
+  },
+]
 </script>
 
 <template>
@@ -25,12 +33,18 @@ if (data.value && data.value.data) {
     class="py-16"
   >
     <div class="container">
-      <div class="flex flex-col-reverse items-center lg:grid lg:grid-cols-5 gap-24 lg:justify-evenly">
+      <div
+        class="flex flex-col-reverse items-center lg:grid lg:grid-cols-5 gap-24 lg:justify-evenly"
+      >
         <!-- image -->
-        <div class=" lg:col-span-2 lg:flex justify-center">
+        <div class="lg:col-span-2 lg:flex justify-center">
           <NuxtImg
             data-aos="fade-up"
-            :src="locale === 'ar' ? '/img/screens/services-screen-ar.png' : '/img/screens/services-screen-en.png'"
+            :src="
+              locale === 'ar'
+                ? '/img/screens/services-screen-ar.png'
+                : '/img/screens/services-screen-en.png'
+            "
             alt="App preview"
             height="464.18"
             width="468"
@@ -41,34 +55,36 @@ if (data.value && data.value.data) {
 
         <!-- services -->
         <div class="lg:col-span-3 text-start lg:mt-4">
-          <h2 class="text-primary text-2xl md:text-4xl font-bold mb-7 border-b-4  border-[#6ACEE5] w-fit pb-3 ">
-            {{ t('landing.service.our_services') }}
+          <h2
+            class="text-primary text-2xl md:text-4xl font-bold mb-7 border-b-4 border-[#6ACEE5] w-fit pb-3"
+          >
+            {{ t("landing.service.our_services") }}
           </h2>
           <p
             data-aos="fade-up"
             class="text-secondary-foreground text-lg mb-10 md:w-5/6"
           >
-            {{ t('landing.service.services_description') }}
+            {{ t("landing.service.services_description") }}
           </p>
-          <div class=" mt-6 flex flex-col items-start gap-6 justify-center">
+          <div class="mt-6 flex flex-col items-start gap-6 justify-center">
             <div
-              v-for="(service, index) in aboutFeature"
-              :key="index"
-              class="flex items-center md:flex-row  gap-5"
+              v-for="item in items"
+              :key="item.id"
+              class="flex items-center md:flex-row gap-5"
               data-aos="fade-up"
-              data-aos-delay="100"
+              :data-aos-delay="100 + item.id * 100"
             >
               <div>
                 <NuxtImg
-                  :src="service.icon"
+                  :src="item.icon"
                   alt="service.key "
-                  class="w-6 h-6 g:w-10 lg:h-10"
+                  class="w-6 h-6 md:w-10 md:h-10"
                   format="webp"
                 />
               </div>
               <div>
                 <p class="text-xl lg:text-[24px] text-[#121212]">
-                  {{ service.key }}
+                  {{ item.title }}
                 </p>
               </div>
             </div>

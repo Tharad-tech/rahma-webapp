@@ -2,6 +2,7 @@ export default {
   welcome: 'مرحباً بك',
   siteName: 'رحمة',
   authorName: 'ثراد تك',
+  get: 'احصل عليه الان',
   meta: {
     title: 'الرئيسية',
   },

@@ -1,26 +1,26 @@
 <script lang="ts" setup>
-import enBadge from '@/assets/img/badges/google-play-en.svg'
-import arBadge from '@/assets/img/badges/google-play-ar.svg'
+const { t } = useI18n()
 
-const { locale } = useI18n()
 const { settings } = useSettings()
 </script>
 
 <template>
-  <a
-    :href="settings?.google_play_url"
-    target="_blank"
-    class="bg-primary rounded-lg p-4 flex justify-center items-center"
+  <NuxtLink
+    :to="settings?.google_play_url"
+    class="bg-primary cursor-pointer rounded-lg p-4 flex justify-center items-center"
   >
-
-    <img
-      :src="locale === 'ar' ? arBadge : enBadge"
-      alt="Google Play"
-      height="36"
-      width="165"
-      class="pointer-events-none -mb-1"
-    >
-  </a>
+    <div class="flex flex-row gap-3">
+      <NuxtImg
+        src="/img/icons/google-play.svg"
+        alt="Google Play"
+        class="md:w-9 md:h-9 w-[25px] h-[25px]"
+      />
+      <div class="flex flex-col items-center text-white">
+        <p class="text-sm">{{ t("get") }}</p>
+        <p class="text-xl font-bold">Google Play</p>
+      </div>
+    </div>
+  </NuxtLink>
 </template>
 
 <style scoped></style>
